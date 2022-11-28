@@ -1,0 +1,164 @@
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 800px;
+}
+.img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+    height: 800px;
+    background-image: url("../images/img12.jpg");
+    background-position: center;
+    background-size: cover;
+    animation: sliding 15s  ease-in-out forwards;
+    animation-delay: 3s;
+}
+.abs{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+}
+.parent{
+    background-image: url("../images/img5.jpg");
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 90px;
+    font-weight: bolder;
+    color: #fff;
+    padding: 20px;
+}
+.part1{
+    position: relative;
+    margin: 0;
+}
+.part1 div:first-of-type{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 270px;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ccc;
+    color: rgb(213, 100, 100);
+    z-index: 2;
+}
+.part1 div:nth-of-type(2){
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    top: 0;
+    padding: 20px;
+    margin:10px 20px;
+    background-image: url("../images/img5.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    border-radius: 30px;
+    animation: moving 8s infinite alternate ease-in-out;
+    animation-delay: 6s;
+}
+.part1 .last{
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 180px;
+    padding: 20px;
+    background-image: url("../images/img3.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    border-radius: 30px;
+    float: left;
+    animation: changing 8s infinite alternate ease-in-out;
+    animation-delay: 10s;
+}
+footer{
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    background-color: #666;
+    display: block;
+}
+@keyframes moving {
+    0%{
+        top: 0;
+        background-image: url("../images/img5.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    25%{
+        background-image: url("../images/img1.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    50%{
+        background-image: url("../images/img11.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    75%{
+        background-image: url("../images/img13.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        top: 280px;
+        background-image: url("../images/img14.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+}
+@keyframes changing {
+    0%{
+        top: 0;
+        background-image: url("../images/img3.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    25%{
+        background-image: url("../images/img2.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    50%{
+        background-image: url("../images/img10.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    75%{
+        background-image: url("../images/img15.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        top: 280px;
+        background-image: url("../images/img6.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+}
+@keyframes sliding {
+    from{
+        transform:translatex(0);
+    }
+    to{
+        transform:translatex(200%);
+    }
+    
+}
